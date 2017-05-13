@@ -51,7 +51,6 @@ $(document).ready(function () {
 				showAnswer($(this).attr('id'));
 			});
 		}
-
 	}
 	//Shows the answer
 	function showAnswer(num) {
@@ -138,7 +137,7 @@ $(document).ready(function () {
 		if (correct == 15) {
 			$('.timeLeft').html('You are a Menu Master!');
 		} else if (correct > wrong) {
-			$('.timeLeft').html('You almost got it, try again to see if you can get the all correct.');
+			$('.timeLeft').html('Almost! See if you can get the all correct.');
 		} else if (noanswer == 15) {
 			$('.timeLeft').html('Do you even care?');
 		} else if (wrong > correct) {
