@@ -96,3 +96,9 @@ h3 {
 	top: 0px;
 	height: 150px;
 }
+
+@media screen and (max-width: 640px) {
+	#jjlogo {
+		height: 50px;
+	}
+}
