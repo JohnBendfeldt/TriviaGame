@@ -26,17 +26,16 @@ h1 {
 	letter-spacing: 0.025em;
 }
 
-.options {
-	background-color: #FFFFFF;
-	padding: 5px;
-}
-
 .wrong {
 	background-color: #e85d5d;
 	padding: 5px;
+	width: 200px;
+	margin: 4px auto;
 }
 
 .correct {
 	background-color: #B8F4CC;
 	padding: 5px;
+	width: 200px;
+	margin: 4px auto;
 }

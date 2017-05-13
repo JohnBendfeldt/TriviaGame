@@ -75,7 +75,7 @@ $(document).ready(function () {
 		if (question < 4) {
 			setTimeout(showQuestion, 3000);	
 		} else {
-			setTimeout(gameOver, 3000);
+			setTimeout(gameOver);
 		}
 		
 	}
@@ -125,7 +125,7 @@ $(document).ready(function () {
 
 	function gameOver() {
 		
-		$('.timeLeft').html('The game is over. Thanks for coming out!');
+		$('.timeLeft').html('Hit Restart if you want to play again!');
 		$('.question').html('');
 		$('.result').html('<br> Correct: ' + correct + '<br>');
 		$('.result').append('Wrong: ' + wrong + '<br>');
