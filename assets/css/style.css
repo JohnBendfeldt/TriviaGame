@@ -25,3 +25,18 @@ h1 {
 	font-size: 48px;
 	letter-spacing: 0.025em;
 }
+
+.options {
+	background-color: #FFFFFF;
+	padding: 5px;
+}
+
+.wrong {
+	background-color: #e85d5d;
+	padding: 5px;
+}
+
+.correct {
+	background-color: #B8F4CC;
+	padding: 5px;
+}
