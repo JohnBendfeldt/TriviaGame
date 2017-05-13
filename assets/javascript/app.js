@@ -22,6 +22,7 @@ $(document).ready(function () {
 		$('.result').show();
 		$('.restart').show();
 		$('.start').hide();
+		$('.directions').hide();
 		showQuestion();
 	});
 	//Showing the question
