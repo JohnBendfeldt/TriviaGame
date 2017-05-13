@@ -1,41 +1,90 @@
-@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
 
 body {
-	background-image: url('../images/america.gif');
+	background-image: url('../images/jimmybg.gif');
 	text-align: center;
+	background-size: 100%;
+	color: #FFFFFF;
+	font-family: 'Oswald', sans-serif;
 }
 
 #container {
 	width: 85%;
 	max-width: 980px;
-	background-color: #D9AF8B;
-	border: 3px solid #000;
+	background-color: #000;
+	border: 5px solid #FFFFFF;
 	margin: 50px auto;
 }
 
 h1 {
-	padding-top: 25px;
-	font-family: 'Abril Fatface', cursive;
-	color: #FFFFFF;
+	font-family: 'Oswald', sans-serif;
+	color: #EC1415;
+	text-shadow:
+			-1px -1px 0 #FFFFFF,  
+    		1px -1px 0 #FFFFFF,
+    		-1px 1px 0 #FFFFFF,
+     		1px 1px 0 #FFFFFF;
+	font-size: 72px;
+	font-weight: 900;
+	margin: 4px auto;
+}
+
+.wrong {
+	background-color: #e85d5d;
+	margin: 4px auto;
 	text-shadow:
 			-1px -1px 0 #000,  
     		1px -1px 0 #000,
     		-1px 1px 0 #000,
      		1px 1px 0 #000;
-	font-size: 48px;
-	letter-spacing: 0.025em;
-}
-
-.wrong {
-	background-color: #e85d5d;
-	padding: 5px;
-	width: 200px;
-	margin: 4px auto;
 }
 
 .correct {
 	background-color: #B8F4CC;
-	padding: 5px;
-	width: 200px;
 	margin: 4px auto;
+	text-shadow:
+			-1px -1px 0 #000,  
+    		1px -1px 0 #000,
+    		-1px 1px 0 #000,
+     		1px 1px 0 #000;
+}
+
+li {
+	list-style: url(../images/star.png);
+	font-size: 24px;
+	border: 1px dashed #FFFFFF;
+	margin: 2px auto;
+	width: 75%;
+	text-align: left;
+}
+
+p {
+	font-size: 28px;
+}
+.restart {
+	background-color: #e85d5d;
+}
+
+.start {
+	background-color: #B8F4CC;
+}
+
+button {
+	color: #000;
+	text-shadow:
+			-1px -1px 0 #FFFFFF,  
+    		1px -1px 0 #FFFFFF,
+    		-1px 1px 0 #FFFFFF,
+     		1px 1px 0 #FFFFFF;
+    font-size: 32px;
+    font-weight: 900;
+}
+
+h2 {
+	font-size: 42px;
+	margin: 0px auto;
+}
+
+h3 {
+	font-size: 32px;
 }

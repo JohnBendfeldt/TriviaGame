@@ -4,13 +4,15 @@ $(document).ready(function () {
 		wrong = 0;
 		noanswer = 0;
 		question = 0;
-		timer = 25;
+		timer = 10;
+		$('.restart').hide();
 	//Function to start game
 	function setupGame() {
-		$('.timeLeft').empty();
-		$('.question').empty();
-		$('.options').empty();
-		$('.result').empty();
+		$('.timeLeft').hide();
+		$('.question').hide();
+		$('.options').hide();
+		$('.result').hide();
+		$('.restart').hide();
 	};
 	//Establish start button behavior
 	$('.start').on('click', function(startGame) {
@@ -18,6 +20,7 @@ $(document).ready(function () {
 		$('.question').show();
 		$('.options').show();
 		$('.result').show();
+		$('.restart').show();
 		$('.start').hide();
 		showQuestion();
 	});
@@ -26,8 +29,7 @@ $(document).ready(function () {
 
 		$('.result').html('');
 		startTimer();
-		var count = question;
-		var obj = questions[count];
+		var obj = questions[question];
 		
 		var qText = obj.q_text;
 		$('.question').html(qText);
@@ -52,19 +54,19 @@ $(document).ready(function () {
 	//Shows the answer
 	function showAnswer(num) {
 		stopTimer();
-		timer = 25;
+		timer = 10;
 		var count = question;
 		var obj = questions[count];
 		var objCorrect = obj.q_correct_option
 		if (num == 0){
 			noanswer++
-			$('.result').html('Loser.');
+			$('.result').html('Please Answer the Questions');
 		} else if (num == objCorrect) {
 			correct++
-			$('.result').html('Winning!');
+			$('.result').html('Correct!');
 		} else {
 			wrong++
-			$('.result').html('Wrong!');
+			$('.result').html('Incorrect!');
 			$('#'+num).addClass('wrong');
 		}
 		$('#'+objCorrect).addClass('correct');
@@ -72,8 +74,8 @@ $(document).ready(function () {
 		$('.result').append('Wrong: ' + wrong + '<br>');
 		$('.result').append('Missed: ' + noanswer);
 		question++
-		if (question < 4) {
-			setTimeout(showQuestion, 3000);	
+		if (question < 15) {
+			setTimeout(showQuestion, 2000);	
 		} else {
 			setTimeout(gameOver);
 		}
@@ -81,7 +83,7 @@ $(document).ready(function () {
 	}
     //Establish timer for each question
     function startTimer(){
-		timer = 25;
+		timer = 10;
 		$('.timeLeft').html('Time Remaining: ' + timer + ' seconds');
 		counter = setInterval(runTimer, 1000);
     }
@@ -119,30 +121,30 @@ $(document).ready(function () {
 		wrong = 0;
 		noanswer = 0;
 		question = 0;
-		timer = 25;
+		timer = 10;
 		setupGame();
 	}
-
+	
 	function gameOver() {
 		
-		$('.timeLeft').html('Hit Restart if you want to play again!');
+		$('.options').html('Hit Restart if you want to try again!');
 		$('.question').html('');
 		$('.result').html('<br> Correct: ' + correct + '<br>');
 		$('.result').append('Wrong: ' + wrong + '<br>');
 		$('.result').append('Missed: ' + noanswer);
 
-		if (correct == 4) {
-			$('.options').html('You are a winner!');
+		if (correct == 15) {
+			$('.timeLeft').html('You are a Menu Master!');
 		} else if (correct > wrong) {
-			$('.options').html('You almost got it, try again to see if you can win more.');
-		} else if (noanswer == 4) {
-			$('.options').html('Do you even care?');
+			$('.timeLeft').html('You almost got it, try again to see if you can get the all correct.');
+		} else if (noanswer == 15) {
+			$('.timeLeft').html('Do you even care?');
 		} else if (wrong > correct) {
-			$('.options').html('Sad! Try again.');
+			$('.timeLeft').html('Sad! Try again.');
 		} else if (wrong == correct) {
-			$('.options').html('We don\'t win anymore. Sad!');
+			$('.timeLeft').html('You should keep studying the menu.');
 		} else {
-			$('.options').html('Thanks for trying...');
+			$('.timeLeft').html('Thanks for trying!');
 		}
 		$('.restart').on('click', restart);
 	}
@@ -161,42 +163,151 @@ $(document).ready(function () {
 
 	var question1 = new question (
 		1,
-		'Do we even win anymore?',
-		'Yes!',
-		'No!',
-		'I know it.',
-		'You know it.',
-		1
+		'What makes Slims unique?',
+		'They are smaller.',
+		'They have only meats or cheese, we can\'t add veggies or sauce.',
+		'They get less mayo.',
+		'They get extra veggies.',
+		2
 	)
 
 	var question2 = new question (
 		2,
-		'Do we even win anymore?',
-		'Yes!',
-		'No!',
-		'I know it.',
-		'You know it.',
-		2
+		'Which subs and clubs have lettuce and tomato?',
+		'All of them.',
+		'All but the ones with tuna.',
+		'The clubs only.',
+		'The subs only.',
+		1
 	)
 
 	var question3 = new question (
 		3,
-		'Do we even win anymore?',
-		'Yes!',
-		'No!',
-		'I know it.',
-		'You know it.',
-		3
+		'Which sandwiches have no mayo?',
+		'The 3, 5 and 15.',
+		'The 2, 3, 4, 14, 16 and 17.',
+		'The 6 and 13.',
+		'The Gargantuan.',
+		1
 	)
 
 	var question4 = new question (
 		4,
-		'Do we even win anymore?',
-		'Yes!',
-		'No!',
-		'I know it.',
-		'You know it.',
+		'Which sandwiches get Onions, Herbs and Sauce?',
+		'The ones with Cheese.',
+		'The ones with Tuna.',
+		'The Billy Club and the Ultimate Porker.',
+		'The ones with Vito.',
 		4
 	)
 
-	var questions = [question1, question2, question3, question4]
+	var question5 = new question (
+		5,
+		'What comes on the #8?',
+		'Mayo, tomato, lettuce, Bacon and Ham.',
+		'Mayo, tomato, lettuce, Beef and Turkey.',
+		'Mayo, tomato, lettuce, Beef, Dijon, Ham and Cheese.',
+		'Mayo, tomato, lettuce, Beef, more Beef and Cheese.',
+		3
+	)
+
+	var question6 = new question (
+		6,
+		'How many pieces of bacon do we put as a portion?',
+		'4.',
+		'Enough to cover the sandwich.',
+		'6.',
+		'5.',
+		4
+	)
+
+	var question7 = new question (
+		7,
+		'What comes on a #14?',
+		'Mayo, tomato, lettuce, Turkey and Bacon.',
+		'Mayo, tomato, lettuce, Beef and Turkey.',
+		'Mayo, tomato, lettuce, Beef, Dijon, Ham and Cheese.',
+		'Mayo, tomato, lettuce, Ham and Bacon.',
+		2
+	)
+
+	var question8 = new question (
+		8,
+		'What comes on the #10?',
+		'Mayo, tomato, lettuce, Bacon and Ham.',
+		'Mayo, tomato, lettuce, Beef and Turkey.',
+		'Mayo, tomato, lettuce, Beef, Dijon, Ham and Cheese.',
+		'Mayo, tomato, lettuce, Beef, more Beef and Cheese.',
+		4
+	)
+
+	var question9 = new question (
+		9,
+		'What comes on the #17?',
+		'Mayo, tomato, lettuce, Bacon and Ham.',
+		'Mayo, tomato, lettuce, Beef and Turkey.',
+		'Mayo, tomato, lettuce, Beef, Dijon, Ham and Cheese.',
+		'Mayo, tomato, lettuce, Beef, more Beef and Cheese.',
+		1
+	)
+
+	var question10 = new question (
+		10,
+		'Which sandwiches have Avo spread on them?',
+		'The 5 and 9.',
+		'The 6, 12 and 13.',
+		'The 3 and 15.',
+		'The 16 and 17.',
+		2
+	)
+
+	var question11 = new question (
+		11,
+		'What comes on the #12?',
+		'Mayo, tomato, lettuce, Bacon and Ham.',
+		'Mayo, tomato, lettuce, Beef and Turkey.',
+		'Mayo, tomato, lettuce, Turkey, Cheese, Avo and Cheese.',
+		'Mayo, tomato, lettuce, Beef, more Beef and Cheese.',
+		3
+	)
+
+	var question12 = new question (
+		12,
+		'What comes on the #9?',
+		'Mayo, tomato, onions, lettuce, sauce, herbs, Vito, Ham and Cheese.',
+		'Mayo, tomato, lettuce, Beef and Turkey.',
+		'Mayo, tomato, lettuce, Beef, Dijon, Ham and Cheese.',
+		'Mayo, tomato, lettuce, Beef, more Beef and Cheese.',
+		1
+	)
+
+	var question13 = new question (
+		13,
+		'What comes on the #11?',
+		'Mayo, tomato, lettuce, Bacon and Ham.',
+		'Mayo, tomato, lettuce, Beef and Turkey.',
+		'Mayo, tomato, lettuce, Beef, Dijon, Ham and Cheese.',
+		'Mayo, tomato, lettuce, Turkey, Ham and Cheese.',
+		4
+	)
+
+	var question14 = new question (
+		14,
+		'What comes on the #16?',
+		'Mayo, tomato, lettuce, Bacon and Ham.',
+		'Mayo, tomato, lettuce, Bacon and Turkey.',
+		'Mayo, tomato, lettuce, Turkey, Ham and Cheese.',
+		'Mayo, tomato, lettuce, Beef, more Beef and Cheese.',
+		2
+	)
+
+	var question15 = new question (
+		15,
+		'Which sandwiches have cucumbers?',
+		'Sandwiches with Tuna.',
+		'Sandwiches with Avo.',
+		'The 3, 6, 12, 13 and 15.',
+		'All of the above.',
+		4
+	)
+	var questions = [question1, question2, question3, question4, question5, question6, question7, question8, question9, question10, question11, question12, question13, question14, question15]
