@@ -14,6 +14,7 @@ body {
 	background-color: #000;
 	border: 5px solid #FFFFFF;
 	margin: 50px auto;
+	position: relative;
 }
 
 h1 {
@@ -87,4 +88,11 @@ h2 {
 
 h3 {
 	font-size: 32px;
+}
+
+#jjlogo {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 150px;
 }

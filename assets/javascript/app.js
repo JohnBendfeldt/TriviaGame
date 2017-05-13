@@ -13,6 +13,7 @@ $(document).ready(function () {
 		$('.options').hide();
 		$('.result').hide();
 		$('.restart').hide();
+		$('.directions').show();
 	};
 	//Establish start button behavior
 	$('.start').on('click', function(startGame) {
