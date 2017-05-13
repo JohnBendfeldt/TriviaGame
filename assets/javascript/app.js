@@ -1,25 +1,5 @@
 $(document).ready(function () {
-
-	//Function to start game
-	function setupGame() {
-		$('.timeLeft').hide();
-		$('.question').hide();
-		$('.options').hide();
-		$('.result').hide();
-	}
-	//Establish start button behavior
-	$('.start').on('click', function(startGame) {
-		$('.timeLeft').show();
-		$('.question').show();
-		$('.options').show();
-		$('.result').show();
-		startTimer();
-	})
-    // Variables that I need
-    var correctAnswer;
-    	wrongAnswer;
-    	restart;
-    	start;
+	// Variables that I need
     var universal = {
 		correct : 0,
 		wrong : 0,
@@ -27,6 +7,22 @@ $(document).ready(function () {
 		question : 0,
 		timer : 25,
 	}
+	//Function to start game
+	function setupGame() {
+		$('.timeLeft').hide();
+		$('.question').hide();
+		$('.options').hide();
+		$('.result').hide();
+	};
+	//Establish start button behavior
+	$('.start').on('click', function(startGame) {
+		$('.timeLeft').show();
+		$('.question').show();
+		$('.options').show();
+		$('.result').show();
+		$('.start').hide();
+		startTimer();
+	});
     //Establish timer for each question
     function startTimer(){
 		universal.timer = 25;
@@ -56,15 +52,17 @@ $(document).ready(function () {
     function stopTimer(){
 		clearInterval(counter);
     }
+    $('.restart').on('click', restart);
 	// Restart
 	function restart() {
 		stopTimer();
+		$('.start').show();
 		universal.correct = 0;
 		universal.wrong = 0;
 		universal.noanswer = 0;
 		universal.question = 0;
 		universal.timer = 25;
-		startTrivia();
+		setupGame();
 	}
 
 
