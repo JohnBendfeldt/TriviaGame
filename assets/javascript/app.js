@@ -51,6 +51,7 @@ $(document).ready(function () {
 				showAnswer($(this).attr('id'));
 			});
 		}
+
 	}
 	//Shows the answer
 	function showAnswer(num) {
