@@ -111,10 +111,34 @@ h3 {
 	#jjlogo {
 		height: 50px;
 	}
+
+	h1 {
+		margin: 50px 0px 0px 0px;
+	}
 }
 
 @media screen and (max-width: 640px) {
 	body {
 		background-size: 1600px 800px;
+	}
+	
+	h1 {
+		font-size: 42px;
+	}
+
+	h2,
+	h3 {
+		font-size: 24px;
+		margin: 0px auto;
+	}
+
+	button,
+	p,
+	li {
+		font-size: 16px;
+	}
+
+	li {
+		width: 90%;
 	}
 }
