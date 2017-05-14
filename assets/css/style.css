@@ -14,7 +14,7 @@ body {
 	border: 5px solid #FFFFFF;
 	margin: 50px auto;
 	position: relative;
-	height: 800px;
+	min-height: 800px;
 }
 
 h1 {
@@ -107,10 +107,13 @@ h3 {
 	}
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 900px) {
 	#jjlogo {
 		height: 50px;
 	}
+}
+
+@media screen and (max-width: 640px) {
 	body {
 		background-size: 1600px 800px;
 	}
