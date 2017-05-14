@@ -3,7 +3,6 @@
 body {
 	background-image: url('../images/jimmybg.gif');
 	text-align: center;
-	background-size: 100%;
 	color: #FFFFFF;
 	font-family: 'Oswald', sans-serif;
 }
@@ -15,6 +14,7 @@ body {
 	border: 5px solid #FFFFFF;
 	margin: 50px auto;
 	position: relative;
+	height: 800px;
 }
 
 h1 {
