@@ -6,6 +6,7 @@ $(document).ready(function () {
 		question = 0;
 		timer = 10;
 		$('.restart').hide();
+		$('.reset').hide();
 	//Function to start game
 	function setupGame() {
 		$('.timeLeft').hide();
@@ -13,6 +14,7 @@ $(document).ready(function () {
 		$('.options').hide();
 		$('.result').hide();
 		$('.restart').hide();
+		$('.reset').hide();
 		$('.directions').show();
 	};
 	//Establish start button behavior
@@ -22,6 +24,7 @@ $(document).ready(function () {
 		$('.options').show();
 		$('.result').show();
 		$('.restart').show();
+		$('.reset').show();
 		$('.start').hide();
 		$('.directions').hide();
 		showQuestion();
@@ -80,8 +83,7 @@ $(document).ready(function () {
 			setTimeout(showQuestion, 2000);	
 		} else {
 			setTimeout(gameOver);
-		}
-		
+		} 
 	}
     //Establish timer for each question
     function startTimer(){
