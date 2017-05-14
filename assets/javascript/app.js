@@ -140,7 +140,7 @@ $(document).ready(function () {
 		if (correct == 15) {
 			$('.timeLeft').html('You are a Menu Master!');
 		} else if (correct > wrong) {
-			$('.timeLeft').html('Almost! See if you can get the all correct.');
+			$('.timeLeft').html('Almost! See if you can get them all correct.');
 		} else if (noanswer == 15) {
 			$('.timeLeft').html('Do you even care?');
 		} else if (wrong > correct) {
@@ -167,7 +167,7 @@ $(document).ready(function () {
 
 	var question1 = new question (
 		1,
-		'What makes Slims unique?',
+		'1. What makes Slims unique?',
 		'They are smaller.',
 		'They have only meats or cheese, we can\'t add veggies or sauce.',
 		'They get less mayo.',
@@ -177,7 +177,7 @@ $(document).ready(function () {
 
 	var question2 = new question (
 		2,
-		'Which subs and clubs have lettuce and tomato?',
+		'2. Which subs and clubs have lettuce and tomato?',
 		'All of them.',
 		'All but the ones with tuna.',
 		'The clubs only.',
@@ -187,7 +187,7 @@ $(document).ready(function () {
 
 	var question3 = new question (
 		3,
-		'Which sandwiches have no mayo?',
+		'3. Which sandwiches have no mayo?',
 		'The 3, 5 and 15.',
 		'The 2, 3, 4, 14, 16 and 17.',
 		'The 6 and 13.',
@@ -197,7 +197,7 @@ $(document).ready(function () {
 
 	var question4 = new question (
 		4,
-		'Which sandwiches get Onions, Herbs and Sauce?',
+		'4. Which sandwiches get Onions, Herbs and Sauce?',
 		'The ones with Cheese.',
 		'The ones with Tuna.',
 		'The Billy Club and the Ultimate Porker.',
@@ -207,7 +207,7 @@ $(document).ready(function () {
 
 	var question5 = new question (
 		5,
-		'What comes on the #8?',
+		'5. What comes on the #8?',
 		'Mayo, tomato, lettuce, Bacon and Ham.',
 		'Mayo, tomato, lettuce, Beef and Turkey.',
 		'Mayo, tomato, lettuce, Beef, Dijon, Ham and Cheese.',
@@ -217,7 +217,7 @@ $(document).ready(function () {
 
 	var question6 = new question (
 		6,
-		'How many pieces of bacon do we put as a portion?',
+		'6. How many pieces of bacon do we put as a portion?',
 		'4.',
 		'Enough to cover the sandwich.',
 		'6.',
@@ -227,7 +227,7 @@ $(document).ready(function () {
 
 	var question7 = new question (
 		7,
-		'What comes on a #14?',
+		'7. What comes on a #14?',
 		'Mayo, tomato, lettuce, Turkey and Bacon.',
 		'Mayo, tomato, lettuce, Beef and Turkey.',
 		'Mayo, tomato, lettuce, Beef, Dijon, Ham and Cheese.',
@@ -237,7 +237,7 @@ $(document).ready(function () {
 
 	var question8 = new question (
 		8,
-		'What comes on the #10?',
+		'8. What comes on the #10?',
 		'Mayo, tomato, lettuce, Bacon and Ham.',
 		'Mayo, tomato, lettuce, Beef and Turkey.',
 		'Mayo, tomato, lettuce, Beef, Dijon, Ham and Cheese.',
@@ -247,7 +247,7 @@ $(document).ready(function () {
 
 	var question9 = new question (
 		9,
-		'What comes on the #17?',
+		'9. What comes on the #17?',
 		'Mayo, tomato, lettuce, Bacon and Ham.',
 		'Mayo, tomato, lettuce, Beef and Turkey.',
 		'Mayo, tomato, lettuce, Beef, Dijon, Ham and Cheese.',
@@ -257,7 +257,7 @@ $(document).ready(function () {
 
 	var question10 = new question (
 		10,
-		'Which sandwiches have Avo spread on them?',
+		'10. Which sandwiches have Avo spread on them?',
 		'The 5 and 9.',
 		'The 6, 12 and 13.',
 		'The 3 and 15.',
@@ -267,7 +267,7 @@ $(document).ready(function () {
 
 	var question11 = new question (
 		11,
-		'What comes on the #12?',
+		'11. What comes on the #12?',
 		'Mayo, tomato, lettuce, Bacon and Ham.',
 		'Mayo, tomato, lettuce, Beef and Turkey.',
 		'Mayo, tomato, lettuce, Turkey, Cheese, Avo and Cheese.',
@@ -277,7 +277,7 @@ $(document).ready(function () {
 
 	var question12 = new question (
 		12,
-		'What comes on the #9?',
+		'12. What comes on the #9?',
 		'Mayo, tomato, onions, lettuce, sauce, herbs, Vito, Ham and Cheese.',
 		'Mayo, tomato, lettuce, Beef and Turkey.',
 		'Mayo, tomato, lettuce, Beef, Dijon, Ham and Cheese.',
@@ -287,7 +287,7 @@ $(document).ready(function () {
 
 	var question13 = new question (
 		13,
-		'What comes on the #11?',
+		'13. What comes on the #11?',
 		'Mayo, tomato, lettuce, Bacon and Ham.',
 		'Mayo, tomato, lettuce, Beef and Turkey.',
 		'Mayo, tomato, lettuce, Beef, Dijon, Ham and Cheese.',
@@ -297,7 +297,7 @@ $(document).ready(function () {
 
 	var question14 = new question (
 		14,
-		'What comes on the #16?',
+		'14. What comes on the #16?',
 		'Mayo, tomato, lettuce, Bacon and Ham.',
 		'Mayo, tomato, lettuce, Bacon and Turkey.',
 		'Mayo, tomato, lettuce, Turkey, Ham and Cheese.',
@@ -307,7 +307,7 @@ $(document).ready(function () {
 
 	var question15 = new question (
 		15,
-		'Which sandwiches have cucumbers?',
+		'15. Which sandwiches have cucumbers?',
 		'Sandwiches with Tuna.',
 		'Sandwiches with Avo.',
 		'The 3, 6, 12, 13 and 15.',
