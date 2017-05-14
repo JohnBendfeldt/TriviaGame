@@ -14,7 +14,7 @@ body {
 	border: 5px solid #FFFFFF;
 	margin: 50px auto;
 	position: relative;
-	min-height: 800px;
+	height: 800px;
 }
 
 h1 {
@@ -111,6 +111,10 @@ h3 {
 	#jjlogo {
 		height: 50px;
 	}
+	
+	#container {
+		height: 900px;
+	}
 
 	h1 {
 		margin: 50px 0px 0px 0px;
@@ -122,6 +126,10 @@ h3 {
 		background-size: 1600px 800px;
 	}
 	
+	#container {
+		height: 600px;
+	}
+
 	h1 {
 		font-size: 42px;
 	}
