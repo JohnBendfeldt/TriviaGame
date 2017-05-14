@@ -169,7 +169,7 @@ $(document).ready(function () {
 		1,
 		'1. What makes Slims unique?',
 		'They are smaller.',
-		'They have only meats or cheese, we can\'t add veggies or sauce.',
+		'They have only meats or cheese, no veggies or sauce.',
 		'They get less mayo.',
 		'They get extra veggies.',
 		2

@@ -119,6 +119,10 @@ h3 {
 	h1 {
 		margin: 50px 0px 0px 0px;
 	}
+
+	li {
+		width: 90%;
+	}
 }
 
 @media screen and (max-width: 640px) {
@@ -144,9 +148,5 @@ h3 {
 	p,
 	li {
 		font-size: 16px;
-	}
-
-	li {
-		width: 90%;
 	}
 }
