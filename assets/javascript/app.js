@@ -4,7 +4,7 @@ $(document).ready(function () {
 		wrong = 0;
 		noanswer = 0;
 		question = 0;
-		timer = 10;
+		timer = 15;
 		$('.restart').hide();
 		$('.reset').hide();
 	//Function to start game
@@ -59,7 +59,7 @@ $(document).ready(function () {
 	//Shows the answer
 	function showAnswer(num) {
 		stopTimer();
-		timer = 10;
+		timer = 15;
 		var count = question;
 		var obj = questions[count];
 		var objCorrect = obj.q_correct_option
@@ -87,7 +87,7 @@ $(document).ready(function () {
 	}
     //Establish timer for each question
     function startTimer(){
-		timer = 10;
+		timer = 15;
 		$('.timeLeft').html('Time Remaining: ' + timer + ' seconds');
 		counter = setInterval(runTimer, 1000);
     }
@@ -125,7 +125,7 @@ $(document).ready(function () {
 		wrong = 0;
 		noanswer = 0;
 		question = 0;
-		timer = 10;
+		timer = 15;
 		setupGame();
 	}
 	
