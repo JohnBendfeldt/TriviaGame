@@ -29,9 +29,10 @@ $(document).ready(function () {
 		$('.directions').hide();
 		showQuestion();
 	});
+	var canChoose = true;
 	//Showing the question
 	function showQuestion(){
-
+		canChoose = true;
 		$('.result').html('');
 		startTimer();
 		var obj = questions[question];
@@ -59,6 +60,9 @@ $(document).ready(function () {
 	//Shows the answer
 	function showAnswer(num) {
 		stopTimer();
+		if(!canChoose) {
+			return
+		}
 		timer = 15;
 		var count = question;
 		var obj = questions[count];
@@ -80,10 +84,11 @@ $(document).ready(function () {
 		$('.result').append('Missed: ' + noanswer);
 		question++
 		if (question < 15) {
-			setTimeout(showQuestion, 2000);	
+			setTimeout(showQuestion, 2000);
 		} else {
 			setTimeout(gameOver);
 		} 
+		canChoose = false;
 	}
     //Establish timer for each question
     function startTimer(){
